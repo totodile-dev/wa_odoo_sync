@@ -6,3 +6,7 @@
 *.mocks.dart
 *.config.dart
 *.gr.dart
+
+# Freezed generated files
+*.freezed.dart
+*.g.dart
