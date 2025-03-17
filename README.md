@@ -2,6 +2,22 @@
 
 A Dart CLI application for Odoo ERP synchronization with built-in pagination and comprehensive logging.
 
+## 🚀 Features
+
+- ✨ Batch processing with smart pagination
+- 📝 Detailed operation logging with timing
+- 🔄 Type-safe data models using Freezed
+- 🔒 Secure environment configuration
+- 📊 Progress tracking for large datasets
+
+## 📋 Supported Odoo Models
+
+- Contacts (`res.partner`)
+- Sales Orders (`sale.order`)
+- Products (`product.template`)
+- Accounting (`account.move`)
+- Subscriptions (`sale.order` with subscription filters)
+
 ## Table of Contents
 - [WA Odoo Sync](#wa-odoo-sync)
   - [Table of Contents](#table-of-contents)
@@ -13,12 +29,25 @@ A Dart CLI application for Odoo ERP synchronization with built-in pagination and
 
 ## Setup
 
-1. Install dependencies:
+### Prerequisites
+- Dart SDK ^3.7.0
+- Odoo instance with API access
+- Valid Odoo credentials
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd wa_odoo_sync
+```
+
+2. Install dependencies:
 ```bash
 dart pub get
 ```
 
-2. Create `.env` file in project root:
+3. Create `.env` file:
 ```env
 ODOO_URL=https://your-odoo-instance.com
 ODOO_DB_NAME=your_database
@@ -26,11 +55,11 @@ ODOO_USERNAME=your_username
 ODOO_PASSWORD=your_password
 ```
 
-3. Generate model files:
+4. Generate required files:
 ```bash
+# Generate Freezed models and JSON serializers
 dart run build_runner build
 ```
-
 ## Development Guide
 
 ### Creating Models
