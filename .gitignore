@@ -2,11 +2,9 @@
 # Created by `dart pub`
 .dart_tool/
 
-# Generated files
-*.mocks.dart
-*.config.dart
-*.gr.dart
-
-# Freezed generated files
-*.freezed.dart
-*.g.dart
+# Generated Dart files
+**/*.g.dart
+**/*.freezed.dart
+**/*.mocks.dart
+**/*.config.dart
+**/*.gr.dart
